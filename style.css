@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: seagreen;
+}
+
+
+/* ---------> inizio header <-------- */
+header{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background: url('img/Shiny\ Overlay.svg') no-repeat;
+    background-size: cover;
+}
+
+.text-title{
+    color: #fff;
+    margin-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 2px solid #fff;
+}
+
+/* ---------> Fine header <-------- */
+
+
+/* ---------> Inizio main <-------- */
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main .add_todo{
+    text-align: center;
+}
+
+.add_todo h2{
+    margin: 20px;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+input{
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+button{
+    padding: 5px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+main .todo_list{
+    margin-top: 50px;
+}
+
+main .todo_list ul{
+    background: url('img/Rect\ Light\ \(1\).svg') no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 20px;
+    list-style: none;
+}
+
+main .todo_list ul li{
+    padding: 10px 0;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.todo_list li:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.todo_list li i{
+    float: right;
+    padding-right: 5px;
+}
+
+.todo_list li i:hover{
+    color: red;
+}
+
+.done{
+    text-decoration: line-through;
+    font-weight: bold;
+}
+/* ---------> Fine main <-------- */

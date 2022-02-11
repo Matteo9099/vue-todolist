@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div id="app">
+
+        <header>
+            <h1 class="text-title">Vue TodoList</h1>
+        </header>
+
+        <main>
+
+            <div class="container">
+
+                <div class="add_todo">
+                    <h2>Crea la Tua Lista</h2>
+
+                    <!-- keyup.enter consente solamente al rilascio del tasto "enter" di fare la funzione richiamata. -->
+                    <input v-on:keyup.enter="addTodo" v-model="newtodo" type="text"
+                        placeholder="Aggiungi elemento alla lista">
+
+                    <button @click="addTodo">Aggiungi</button>
+                </div>
+
+                <div class="todo_list">
+                    <ul v-if="todos.length">
+                        <li v-for="(todo,index) in todos" :class="{done: todo.done}" @click="toggleElement(index)">
+                            {{todo.obj}}
+                            <i @click="removeTodo()" class="fa-solid fa-xmark"></i>
+                        </li>
+                    </ul>
+                    <div v-else>
+                        <h2>Non ci sono elementi in lista.</h2>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
