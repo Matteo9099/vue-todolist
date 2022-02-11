@@ -14,10 +14,8 @@ const vue = new Vue (
         methods: {
             // creo un metodo che stampi all'interno della lista il valore passato nell'imput
             addTodo(){
-                if(this.newtodo){
-                    this.todos.push({obj: this.newtodo, done:false});
-                    this.newtodo = "";
-                }
+                this.todos.push({obj: this.newtodo, done:false});
+                this.newtodo = "";
             },
             // Funzione che elimina il todo cliccato
             removeTodo(index){
